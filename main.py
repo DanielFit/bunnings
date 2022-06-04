@@ -3,7 +3,7 @@ import competitors
 import current_stock
 import  analysis
 
-""""You can use the functions to check prices of current stocked item.
+""""ou can use the functions to check prices of current stocked item.
 try by_competition or by_product"""
 
 
