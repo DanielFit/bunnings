@@ -1,4 +1,4 @@
-#categories
+"""These prices listed are Bunning's prices on their stocked its in Financial year 1(fy1)"""
 
 
 import competitors

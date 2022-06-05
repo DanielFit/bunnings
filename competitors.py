@@ -1,5 +1,5 @@
-"""If Bunning's will beat a chaeper rpice on a stocked item by 10%, you really only need to know
-the current cheapest competitor"""
+"""If Bunning's will beat a cheaper price on a stocked item by 10%, you really only need to know
+the current cheapest competitor's prices and they are listed below"""
 
 
 
