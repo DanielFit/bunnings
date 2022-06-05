@@ -5,7 +5,7 @@ import  analysis
 import  sales_report
 
 """"You can use the functions to check prices of current stocked item.
-try by_competition or by_product"""
+try compare_after_discount or by_product"""
 
 
 

@@ -5,13 +5,12 @@ import competitors
 from collections import defaultdict
 
 
-"""Here we can find out if a lower price on a stocked item is beaten by 10%, how much
-profit will be lost. We can then use these to figures to determine how many sales need
-to be made to make up for the loss. This tool is intended to be use to make decisions 
-about the future"""
+"""Here we can find out if Bunning's compares two financial years, in financial year 1 they do not
+ offer any discount and in financial year 2 they apply the discount of 'beating competitors prices by 10%'
+ """
 
 
-"""this looks only at each item individually to see how much each item loses 
+"""this looks at each item in a category individually to see how much each item loses 
 value if the discount is applied due to a competitor having a lower priced
 item"""
 def loss_on_discount_per_item(cs:dict, comp:dict):
@@ -33,8 +32,7 @@ def loss_on_discount_per_item(cs:dict, comp:dict):
 
     return loss_per_product ,'$', total_loss
 
-"""This functionmeasures over a two years the profits and loses per item in a category
-and then reutrns for the category the overall profit or loss for the year"""
+"""This function measures the profits and loses per item in a category over two financial years """
 def profit_loss_by_year_by_category_items(fy1:dict, fy2:dict):
     fy1_copy = collections.Counter(fy1)
     fy2_copy = collections.Counter(fy2)
@@ -44,6 +42,7 @@ def profit_loss_by_year_by_category_items(fy1:dict, fy2:dict):
     total = round(sum(profits.values()) - sum(losses.values()),2)
     return "profits $", str(profits),"losses $",str(losses)
 
+"""This function measures the profits and loses per item in a category over two financial years """
 def profit_loss_by_year_category_total(fy1:dict, fy2:dict):
     fy1_copy = collections.Counter(fy1)
     fy2_copy = collections.Counter(fy2)
