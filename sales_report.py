@@ -2,6 +2,7 @@ import collections
 import current_stock
 import beat_it_by_10
 import competitors
+import analysis
 
 """These dictionaries measure how many units were sold before and after the
 beat it by 10% discount was brought in. We then measure what the difference is in
@@ -10,7 +11,8 @@ but it was not included in fy1. We will assume for this example other variables 
 are otherwise accounted for. The purpose is to determine the validity of Bunning's discount to see if they
 sell enough stock to make up for the lower prices"""
 
-#this function will multiple the units sold in a financial year by the price of the products duirng that financial year
+"""this function will multiple the units sold in a financial year by the price of the products 
+duirng that financial year"""
 def profits(units_sold: dict,prices: dict):
     profits_for_category = {
     k: v * units_sold[k]
@@ -27,6 +29,12 @@ def profits(units_sold: dict,prices: dict):
 power_tools_units_sold_fy1 = {'drill':436, 'chainsaw':2378,'sander':215}
 outdoor_furniture_units_sold_fy1 = {'chair':475, 'table':135,'hammock':984}
 timber_units_sold_fy1 = {'pine':325, 'oak':734,'balsa':745}
+
+fy1_units_sold_nested = {
+'power_tools_units_sold_fy1' : {'drill':436, 'chainsaw':2378,'sander':215},
+'outdoor_furniture_units_sold_fy1' : {'chair':475, 'table':135,'hammock':984},
+'timber_units_sold_fy1' : {'pine':325, 'oak':734,'balsa':745},
+}
 
 #Financial year 2 number of units sold units sold.
 power_tools_units_sold_fy2 = {'drill':763, 'chainsaw':2398,'sander':285}
@@ -50,10 +58,13 @@ power_tools_profits_fy2 = profits(power_tools_units_sold_fy2,power_tools_fy2_pri
 outdoor_furniture_profits_fy2 = profits(outdoor_furniture_units_sold_fy2,outdoor_furniture_fy2_price)
 timber_profits_fy2 = profits(timber_units_sold_fy2,timber_fy2_price)
 
+#profits of fy2 - profits of fy1 to examine the growth or reduction in sales
+power_tool_sales = analysis.profit_loss_by_year_category_total(power_tools_profits_fy1, power_tools_profits_fy2)
+outdoor_furniture_sales = analysis.profit_loss_by_year_category_total(outdoor_furniture_profits_fy1, outdoor_furniture_profits_fy2)
+timber_sales = analysis.profit_loss_by_year_category_total(timber_profits_fy1, timber_profits_fy2)
 
-print("fy1",power_tools_profits_fy1," fy2 ", power_tools_profits_fy2)
-print("fy1",outdoor_furniture_profits_fy1," fy2 ",outdoor_furniture_profits_fy2)
-print("fy1",timber_profits_fy1," fy2 ",timber_profits_fy2)
+
+
 
 
 
