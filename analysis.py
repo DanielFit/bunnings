@@ -14,11 +14,7 @@ from collections import defaultdict
 value if the discount is applied due to a competitor having a lower priced
 item"""
 def loss_on_discount_per_item(cs:dict, comp:dict):
-    discount = cs.copy()
-    for key in discount:
-        if key in comp:
-            if discount[key] > comp[key]:
-                discount[key] = round(comp[key] * .9, 2)
+    discount = beat_it_by_10.discounted_prices(cs,comp)
 
     copy_discount = collections.Counter(discount)
     copy_cs = collections.Counter(cs)
@@ -39,8 +35,7 @@ def profit_loss_by_year_by_category_items(fy1:dict, fy2:dict):
 
     profits = dict(fy2_copy- fy1_copy)
     losses = dict(fy1_copy- fy2_copy)
-    total = round(sum(profits.values()) - sum(losses.values()),2)
-    return "profits $", str(profits),"losses $",str(losses), "$", total
+    return "profits $", str(profits),"losses $",str(losses)
 
 """This function measures the profits and loses per item in a category over two financial years """
 def profit_loss_by_year_category_total(fy1:dict, fy2:dict):
