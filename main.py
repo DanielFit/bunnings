@@ -4,10 +4,11 @@ import current_stock
 import  analysis
 import  sales_report
 
-""""You can use the functions to check prices of current stocked item.
-try compare_after_discount or by_product"""
+"""You can run the functions from beat_it_by_10 to check the price of Bunnings products. If a competitor has a cheaper
+price on a stocked item, the Bunning's price will be changed so it is 10% cheaper than the competitors price.
+You can see a whole category of products using: by_category or a single item by using: by_product"""
 
 
 
 
-
+print(analysis.loss_on_discount_per_item(current_stock.power_tools,competitors.comp_power_tools))

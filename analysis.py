@@ -40,7 +40,7 @@ def profit_loss_by_year_by_category_items(fy1:dict, fy2:dict):
     profits = dict(fy2_copy- fy1_copy)
     losses = dict(fy1_copy- fy2_copy)
     total = round(sum(profits.values()) - sum(losses.values()),2)
-    return "profits $", str(profits),"losses $",str(losses)
+    return "profits $", str(profits),"losses $",str(losses), "$", total
 
 """This function measures the profits and loses per item in a category over two financial years """
 def profit_loss_by_year_category_total(fy1:dict, fy2:dict):
