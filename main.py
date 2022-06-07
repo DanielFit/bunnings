@@ -11,4 +11,4 @@ You can see a whole category of products using: by_category or a single item by 
 
 
 
-print(analysis.loss_on_discount_per_item(current_stock.power_tools,competitors.comp_power_tools))
+print(sales_report.power_tool_sales_growth)

@@ -48,6 +48,17 @@ def profit_loss_by_year_category_total(fy1:dict, fy2:dict):
     return total
 
 
-
+"""this function will multiple the units sold in a financial year by the price of the products 
+duirng that same financial year"""
+def profits(units_sold: dict,prices: dict):
+    profits_for_category = {
+    k: v * units_sold[k]
+    for k, v in prices.items()
+    if k in units_sold
+    }
+    profits_for_category_rounded = dict()
+    for key in profits_for_category:
+        profits_for_category_rounded[key] = round(profits_for_category[key], 2)
+    return profits_for_category_rounded
 
 
