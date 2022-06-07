@@ -1,16 +1,8 @@
-
-
-"""Compare two dictionaries, x is the current stock of Bunning's and y is the lowest found price
+"""Compare two dictionaries,the current stock of Bunning's and the lowest found price
 amongst competitors on a current stocked item. If an item sold by a competitor is found to be
 lower than a stocked item, the stocked item for Bunning's is changed to be 10% less than that
 of the competitor’s price."""
-import competitors
-import current_stock
 
-"""Compare two dictionaries, cs is the current stock of Bunning's and comp is the lowest found price
-amongst competitors on a current stocked item. If an item sold by a competitor is found to be
-lower than a stocked item, the stocked items price for Bunning's is changed to be 10% less than that
-of the competitor’s price."""
 
 
 #this function grabs all items in a category, then returns the original and discounted prices for comparison

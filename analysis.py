@@ -1,8 +1,6 @@
 import collections
 import beat_it_by_10
-import current_stock
-import competitors
-from collections import defaultdict
+
 
 
 """Here we can find out if Bunning's compares two financial years, in financial year 1 they do not

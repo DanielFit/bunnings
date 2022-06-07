@@ -1,12 +1,14 @@
-import beat_it_by_10
 import competitors
 import current_stock
+import beat_it_by_10
+import financial_year_1
+import financial_year_2
 import  analysis
 import  sales_report
 
-"""You can run the functions from beat_it_by_10 to check the price of Bunnings products. If a competitor has a cheaper
-price on a stocked item, the Bunning's price will be changed so it is 10% cheaper than the competitors price.
-You can see a whole category of products using: by_category or a single item by using: by_product"""
+"""The below functions are designed to assess the validity of Bunning's discount that if a competitor has a cheaper
+price on a stocked item we'll beat it by 10%. This only a mock up case not using real data from Bunning's or its
+competitors"""
 
 
 
