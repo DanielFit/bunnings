@@ -13,4 +13,4 @@ competitors"""
 
 
 
-print(sales_report.power_tool_sales_growth)
+print(beat_it_by_10.by_product('drill',10, current_stock.power_tools))

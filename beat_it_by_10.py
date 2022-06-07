@@ -24,8 +24,8 @@ def by_product(name: str,price:int,category: dict):
             print("Our price $", original)
             print("Your price $", price)
             if category[key] > product[key]:
-                category[key] = round(product[key]*.9,2) , "reduced"
-                print("we'll beat it by 10%")
+                category[key] = round(product[key]*.9,2)
+                print("we'll beat it by 10%"," $",category[key])
 
 
 #This function returns only the disconted prices so it can be used in conjuction with other functions
